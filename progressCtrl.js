@@ -1,8 +1,8 @@
-var progress= document.querySelector('.progress-done');
+// var progress= document.querySelector('.progress-done');
 
-setTimeout(() => {
-    progress.style.opacity = 1;
-    progress.style.width = progress.getAttribute('data-done')+"%";
+// setTimeout(() => {
+//     progress.style.opacity = 1;
+//     progress.style.width = progress.getAttribute('data-done')+"%";
 
-},5000);
+// },5000);
 
