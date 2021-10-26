@@ -1,15 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Progress = ({done}) => {
     const [style, setStyle] = useState({    });
 
-    setTimeout(() => {
-        const newStyle = {
-            opacity: 1,
-            width:`${done}%`
+    useEffect(() => {
+       const timer = setTimeout(() => {
+            const newStyle = {
+                opacity: 1,
+                width:`${done}%`
+            }
+            console.log("useEffect running")
+            setStyle(newStyle)
+        }, 500)
+        return () => {
+            clearTimeout(timer)
         }
-        setStyle(newStyle)
-    }, 500)
+    }, []);
+
 
     return (
         <div className="body">
